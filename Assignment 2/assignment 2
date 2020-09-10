@@ -1,0 +1,142 @@
+//Question 1
+function change() {
+  console.log("changing");
+  document.getElementById("blueimg").style.display = "none";
+  document.getElementById("redimg").style.display = "block";
+  document.getElementById("greenimg").style.display = "none";
+}
+
+function changea() {
+  console.log("changing a");
+  document.getElementById("redimg").style.display = "none";
+  document.getElementById("greenimg").style.display = "block";
+  document.getElementById("blueimg").style.display = "none";
+}
+
+function reset() {
+  console.log("resetiing");
+  document.getElementById("redimg").style.display = "none";
+  document.getElementById("greenimg").style.display = "none";
+  document.getElementById("blueimg").style.display = "block";
+}
+
+//Question2
+function paster() {
+  let a = document.getElementsByTagName("input")[0].value;
+  document.getElementsByTagName("input")[1].value = a;
+}
+
+//Question3
+
+let barry = [
+  {
+    name: "jhon",
+    age: 25,
+    country: "USA",
+    hobby: ["read", "write"],
+  },
+  {
+    name: "Rosa",
+    age: 33,
+    country: "Mexico",
+    hobby: ["boxing", "singing"],
+  },
+  {
+    name: "Jamal",
+    age: 50,
+    country: "Russia",
+    hobby: ["skate", "dance"],
+  },
+  {
+    name: "Raju",
+    age: 9,
+    country: "India",
+    hobby: ["read", "write"],
+  },
+  {
+    name: "Prachi",
+    age: 82,
+    country: "India",
+    hobby: ["public speaking", "fitness"],
+  },
+  {
+    name: "Faruk",
+    age: 46,
+    country: "Mexico",
+    hobby: ["sports", "Fitness"],
+  },
+];
+
+function doMake() {
+  console.log(barry);
+}
+
+doMake();
+
+//Questiin4
+function getAge() {
+  for (let i = 0; i < barry.length; i++) {
+    let age = barry[i].age;
+    if (age <= 30) {
+      console.log(barry[i].name);
+    }
+  }
+}
+
+getAge();
+
+console.log(" ");
+
+function getCountry() {
+  for (let i = 0; i < barry.length; i++) {
+    let country = barry[i].country;
+    if (country == "India") {
+      console.log(barry[i].name);
+    }
+  }
+}
+
+getCountry();
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="first">hello</div>
+    <hr />
+    <img id="blueimg" src="blueholi.jpg" width="50px" height="50px" />
+    <img
+      id="redimg"
+      src="redholi.jpg"
+      width="50px"
+      height="50px"
+      style="display: none"
+    />
+    <img
+      id="greenimg"
+      src="greenholi.jpg"
+      width="50px"
+      height="50px"
+      style="display: none"
+    />
+    <br />
+    <button type="button" id="cha" onclick="change()">change image</button>
+    <button type="button" value="chb" onclick="changea()">change image</button>
+    <button type="button" value="chr" onclick="reset()">rest image</button>
+    <br />
+    <hr />
+    Enter something:<input type="text" />
+    <button type="button" onclick="paster()">Click to copy and paste</button>
+    <input type="text" />
+    <hr />
+
+    <script src="assignment2.js"></script>
+  </body>
+</html>
+
